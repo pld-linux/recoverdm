@@ -1,10 +1,39 @@
---- recoverdm-0.14/Makefile.orig	Thu Jan  9 18:37:10 2003
-+++ recoverdm-0.14/Makefile	Mon Feb 10 16:52:28 2003
-@@ -9,7 +9,6 @@
+diff -Nur recoverdm-0.15.org/Makefile recoverdm-0.15/Makefile
+--- recoverdm-0.15.org/Makefile	2004-02-17 13:45:10.000000000 +0000
++++ recoverdm-0.15/Makefile	2004-02-17 20:46:44.000000000 +0000
+@@ -10,11 +10,9 @@
  
- recoverdm: $(OBJS)
- 	$(CC) -Wall -W $(OBJS) $(LDFLAGS) -o recoverdm
+ recoverdm: $(OBJSr)
+ 	$(CC) -Wall -W $(OBJSr) $(LDFLAGS) -o recoverdm
 -	strip recoverdm
  
+ mergebad: $(OBJSm)
+ 	$(CC) -Wall -W $(OBJSm) $(LDFLAGS) -o mergebad
+-	strip mergebad
+ 
  clean:
- 	rm -f $(OBJS) recoverdm core
+ 	rm -f $(OBJSr) $(OBJSm) recoverdm mergebad core
+diff -Nur recoverdm-0.15.org/mergebad.c recoverdm-0.15/mergebad.c
+--- recoverdm-0.15.org/mergebad.c	2004-02-17 13:45:10.000000000 +0000
++++ recoverdm-0.15/mergebad.c	2004-02-17 20:47:21.000000000 +0000
+@@ -34,7 +34,7 @@
+ 
+ void version(void)
+ {
+-	printf("mergebad v" VERSION ", (c) 2004 by folkert@vanheusden.com\n\n");
++	printf("mergebad v0.15, (c) 2004 by folkert@vanheusden.com\n\n");
+ }
+ 
+ int find_image_without_badblock(image *imgs, int n_imgs, off64_t offset)
+diff -Nur recoverdm-0.15.org/recoverdm.c recoverdm-0.15/recoverdm.c
+--- recoverdm-0.15.org/recoverdm.c	2004-02-17 13:45:10.000000000 +0000
++++ recoverdm-0.15/recoverdm.c	2004-02-17 20:47:08.000000000 +0000
+@@ -19,7 +19,7 @@
+ 
+ void version(void)
+ {
+-	printf("recoverdm v" VERSION ", (c) 2003-2004 by folkert@vanheusden.com\n\n");
++	printf("recoverdm v0.15, (c) 2003-2004 by folkert@vanheusden.com\n\n");
+ }
+ 
+ void usage(void)
