@@ -1,12 +1,12 @@
 Summary:	recoverdm - recover files/disks with damaged sectors
 Summary(pl):	recoverdm - odzyskuje pliki/dyski z uszkodzonymi sektorami
 Name:		recoverdm
-Version:	0.15
+Version:	0.17
 Release:	1
 License:	distributable
 Group:		Applications/System
 Source0:	http://www.vanheusden.com/recoverdm/%{name}-%{version}.tgz
-# Source0-md5:	0c40769f91fbcacdcf20fafea6bc8bc1
+# Source0-md5:	78226539d13d433a6fc4a89bdb38e988
 Patch0:		%{name}-nostrip.patch
 URL:		http://www.vanheusden.com/recoverdm/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
