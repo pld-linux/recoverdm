@@ -6,6 +6,7 @@ Release:	1
 License:	distributable
 Group:		Applications/System
 Source0:	http://www.vanheusden.com/recoverdm/%{name}-%{version}.tgz
+# Source0-md5:	f07bea05ce0a9054c5187004473f8d23
 Patch0:		%{name}-nostrip.patch
 URL:		http://www.vanheusden.com/recoverdm/
 BuildRequires:	fvhlib-devel >= 2.0
