@@ -1,0 +1,10 @@
+--- recoverdm-0.14/Makefile.orig	Thu Jan  9 18:37:10 2003
++++ recoverdm-0.14/Makefile	Mon Feb 10 16:52:28 2003
+@@ -9,7 +9,6 @@
+ 
+ recoverdm: $(OBJS)
+ 	$(CC) -Wall -W $(OBJS) $(LDFLAGS) -o recoverdm
+-	strip recoverdm
+ 
+ clean:
+ 	rm -f $(OBJS) recoverdm core
