@@ -1,7 +1,3 @@
-
-# conditional build:
-# _without_dist_kernel    without kernel from distribution
-
 Summary:	recoverdm - recover files/disks with damaged sectors
 Summary(pl):	recoverdm - odzyskuje pliki/dyski z uszkodzonymi sektorami
 Name:		recoverdm
@@ -10,9 +6,9 @@ Release:	1
 License:	distributable
 Group:		Applications/System
 Source0:	http://www.vanheusden.com/recoverdm/%{name}-%{version}.tgz
+Patch0:		%{name}-nostrip.patch
 URL:		http://www.vanheusden.com/recoverdm/
 BuildRequires:	fvhlib-devel >= 2.0
-%{!?_without_dist_kernel:BuildRequires: kernel-headers}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -25,9 +21,12 @@ odzyskaæ zarówno pliki jak i ca³e urz±dzenia.
 
 %prep
 %setup -q
+%patch -p1
 
 %build
-%{__make}
+%{__make} \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags} -Wall -Wshadow -Wwrite-strings -Wconversion -Winline"
 
 %install
 rm -rf $RPM_BUILD_ROOT
