@@ -26,6 +26,7 @@ odzyskaæ zarówno pliki jak i ca³e urz±dzenia.
 %build
 %{__make} \
 	CC="%{__cc}" \
+	LDFLAGS="%{rpmldflags}" \
 	CFLAGS="%{rpmcflags} -Wall -Wshadow -Wwrite-strings -Wconversion -Winline"
 
 %install
