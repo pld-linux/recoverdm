@@ -1,11 +1,13 @@
 diff -Nur recoverdm-0.15.org/Makefile recoverdm-0.15/Makefile
 --- recoverdm-0.15.org/Makefile	2004-02-17 13:45:10.000000000 +0000
 +++ recoverdm-0.15/Makefile	2004-02-17 20:46:44.000000000 +0000
-@@ -10,11 +10,9 @@
+@@ -10,13 +10,11 @@
  
  recoverdm: $(OBJSr)
  	$(CC) -Wall -W $(OBJSr) $(LDFLAGS) -o recoverdm
 -	strip recoverdm
+ 	echo
+ 	echo Oh, blatant plug: http://keetweej.vanheusden.com/wishlist.html
  
  mergebad: $(OBJSm)
  	$(CC) -Wall -W $(OBJSm) $(LDFLAGS) -o mergebad
