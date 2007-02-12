@@ -1,5 +1,5 @@
 Summary:	recoverdm - recover files/disks with damaged sectors
-Summary(pl):	recoverdm - odzyskuje pliki/dyski z uszkodzonymi sektorami
+Summary(pl.UTF-8):   recoverdm - odzyskuje pliki/dyski z uszkodzonymi sektorami
 Name:		recoverdm
 Version:	0.19
 Release:	1
@@ -15,9 +15,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This program will help you recover disks with bad sectors. You can
 recover files as well as complete devices.
 
-%description -l pl
-Ten program pomo¿e Ci odzyskaæ dyski ze z³ymi sektorami. Mo¿esz
-odzyskaæ zarówno pliki jak i ca³e urz±dzenia.
+%description -l pl.UTF-8
+Ten program pomoÅ¼e Ci odzyskaÄ‡ dyski ze zÅ‚ymi sektorami. MoÅ¼esz
+odzyskaÄ‡ zarÃ³wno pliki jak i caÅ‚e urzÄ…dzenia.
 
 %prep
 %setup -q
