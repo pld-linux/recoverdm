@@ -1,5 +1,5 @@
 Summary:	recoverdm - recover files/disks with damaged sectors
-Summary(pl.UTF-8):   recoverdm - odzyskuje pliki/dyski z uszkodzonymi sektorami
+Summary(pl.UTF-8):	recoverdm - odzyskuje pliki/dyski z uszkodzonymi sektorami
 Name:		recoverdm
 Version:	0.19
 Release:	1
