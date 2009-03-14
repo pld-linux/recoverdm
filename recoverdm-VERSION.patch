@@ -1,0 +1,24 @@
+diff -burNp recoverdm-0.20/mergebad.c recoverdm-0.20-dud/mergebad.c
+--- recoverdm-0.20/mergebad.c	2009-01-06 16:22:12.000000000 +0100
++++ recoverdm-0.20-dud/mergebad.c	2009-03-14 12:29:47.191820580 +0100
+@@ -34,7 +34,7 @@ typedef struct
+ 
+ void version(void)
+ {
+-	printf("mergebad v" VERSION ", (c) 2004 by folkert@vanheusden.com\n\n");
++	printf("mergebad v0.20, (c) 2009 by folkert@vanheusden.com\n\n");
+ }
+ 
+ int find_image_without_badblock(image *imgs, int n_imgs, off64_t offset)
+diff -burNp recoverdm-0.20/recoverdm.c recoverdm-0.20-dud/recoverdm.c
+--- recoverdm-0.20/recoverdm.c	2009-01-06 16:22:12.000000000 +0100
++++ recoverdm-0.20-dud/recoverdm.c	2009-03-14 12:30:41.905363748 +0100
+@@ -19,7 +19,7 @@
+ 
+ void version(void)
+ {
+-	printf("recoverdm v" VERSION ", (c) 2003-2004 by folkert@vanheusden.com\n\n");
++	printf("recoverdm v0.20, (c) 2009 by folkert@vanheusden.com\n\n");
+ }
+ 
+ void usage(void)
